@@ -76,7 +76,7 @@ etfProfile = client.etf.profile(symbol)
 transactionItem = TransactionItem("MSFT", 2, frm).get()
 transactionList = [transactionItem]
 
-portfolioRegion = client.portfolio.region(TransactionList)
+portfolioRegion = client.portfolio.region(transactionList)
 portfolioStats = client.portfolio.stats(frm, to, resolution, transactionList, "USD")
 portfolioChart = client.portfolio.chart(frm, to, resolution, transactionList)
  ```
