@@ -46,17 +46,12 @@ from bavest import BavestRESTClient
 2. Create a finance `client`:
 
  ```python
-from bavest import BavestRESTClient
-
 client = BavestRestClient(apiKey)
   ```
 
 3. Now you can use it to get data from the api:
 
 ```python
-from bavest import BavestRESTClient
-
-client = BavestRestClient(apiKey)
 quote = client.quote("AAPL")
 ```
 
