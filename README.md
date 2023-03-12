@@ -1,39 +1,40 @@
 <p align="center">
-  <img wsymbolth="300" alt="posthoglogo" src="https://i.imgur.com/z4ZPmGN.png">
+  <img  src="https://www.bavest.co/images/api-home.png">
 </p>
 
-# Bavest Finance SDK
+# Bavest Python SDK
+
+<img wsymbolth=300 src="https://img.shields.io/badge/license-MIT-brightgreen" > <img wsymbolth=300 src="https://img.shields.io/badge/tests-passing-brightgreen" > <img src="https://img.shields.io/github/issues/Bavest/python-sdk"> <img src="https://img.shields.io/pypi/pyversions/bavest"> <img src="https://img.shields.io/pypi/wheel/bavest">
 
 **The Bavest Finance SDK is an open-source library to create finance products in weeks. Bavest offers:**
 
-* Financial api with 99.999% uptime
+* Financial api with 99.95% uptime
 * Easy to integrate and use
 * Free for open-source projects
 
-## Get started for free
 
-### Personal API key
+## Get API key
 
-First, you need to create an account on [Bavest](https://www.dashboard.bavest.com).
+First, you need to create a [Bavest](https://www.dashboard.bavest.com) account.
 After registration, you will find your api key in the dashboard.
 
-### Open-Source projects
+### Free API key for Open-Source projects
 
-If you are working on an open-source project, you can use the SDK for free.
-Just send us an email to `support@bavest.co` with the following information:
+First, use the [TypeForm](https://e0nemwrtihz.typeform.com/to/xT8KfS0I) to provide all required information.
+After, you will receive an API key via E-Mail.
 
-* Your GitHub username
-* The name of your project
-* The link to your project on GitHub
-* A description of your project
 
 ### Install the package
 
-First install the python package:
+First install the python package using [pip](https://pypi.org/project/bavest):
 
  ```python 
 pip install bavest 
  ```
+ 
+ 
+### Documentation
+See [here](https://docs.bavest.co/) for more information. 
 
 ### Usage
 
@@ -80,3 +81,7 @@ portfolioRegion = client.portfolio.region(transactionList)
 portfolioStats = client.portfolio.stats(frm, to, resolution, transactionList, "USD")
 portfolioChart = client.portfolio.chart(frm, to, resolution, transactionList)
  ```
+ 
+ ## Contact
+ 
+ <img src="https://www.bavest.co/images/api-support.png" >
