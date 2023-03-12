@@ -17,3 +17,4 @@ def fromjson(json_response):
     else:
         return {"error": 404, "body": "Bavest api error"}
     return user
+

@@ -35,3 +35,5 @@ etf_country = "https://api.bavest.co/v0/etf/country"
 search = "https://api.bavest.co/v0/search"
 api_status = "https://api.bavest.co/v0/status"
 forex = "https://api.bavest.co/v0/fx/quote"
+
+
