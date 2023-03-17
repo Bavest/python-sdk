@@ -82,6 +82,11 @@ portfolioStats = client.portfolio.stats(frm, to, resolution, transactionList, "U
 portfolioChart = client.portfolio.chart(frm, to, resolution, transactionList)
  ```
  
- ## Contact
+# :octocat: Credits
+1. William Todt <william.todt@bavest.co> - Maintainer
+2. Hisham Parveez <hisham.parveez@bavest.co> - Maintainer
+
+# Contact
+Please open a Github issue or send us an email at `support@bavest.co`.
  
- <img src="https://www.bavest.co/images/api-support.png" >
+ 
