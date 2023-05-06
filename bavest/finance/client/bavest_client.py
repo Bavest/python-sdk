@@ -760,7 +760,7 @@ class BavestRESTClient:
             to_time = datetime.timestamp(to_date)
             body = {"symbol": symbol, "from": frm_time, "to": to_time, "resolution": resolution.name,
                     "currency": currency}
-            self.response = api.post(urls.quote_url, self.headers, body)
+            self.response = api.post(urls.candle_url, self.headers, body)
             content = check_response(json.loads(self.response.content))
             return content
         except requests.exceptions.Timeout:
