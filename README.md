@@ -12,7 +12,6 @@
 * Easy to integrate and use
 * Free for open-source projects
 
-
 ## Get API key
 
 First, you need to create a [Bavest](https://www.dashboard.bavest.com) account.
@@ -23,6 +22,24 @@ After registration, you will find your api key in the dashboard.
 First, use the [TypeForm](https://e0nemwrtihz.typeform.com/to/xT8KfS0I) to provide all required information.
 After, you will receive an API key via E-Mail.
 
+### Template
+````python
+import os
+import dateutil
+from bavest import BavestRESTClient, Resolution
+from datetime import datetime
+import dateutil.relativedelta as relativedelta
+
+BAVEST_API_KEY = os.environ.get('BAVEST_API_KEY')
+client = BavestRESTClient(BAVEST_API_KEY)
+
+if __name__ == "__main__":
+    to = datetime.now()
+    frm = to + dateutil.relativedelta.relativedelta(days=-2)
+    to = to + dateutil.relativedelta.relativedelta(days=-1)
+    resolution = Resolution.DAILY
+    candles = client.candles("AAPL", frm, to, resolution)
+````
 
 ### Install the package
 
