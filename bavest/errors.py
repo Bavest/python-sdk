@@ -6,8 +6,8 @@ class BavestApiStatusException(Exception):
     body = None
 
     def __init__(self, api_exception):
-        self.statuscode = api_exception['statusCode']
-        self.body = api_exception['body']
+        self.statuscode = api_exception["statusCode"]
+        self.body = api_exception["body"]
 
 
 class BavestApiException(Exception):
@@ -17,10 +17,10 @@ class BavestApiException(Exception):
     stackTrace = None
 
     def __init__(self, api_exception):
-        self.errorMessage = api_exception['errorMessage']
-        self.errorType = api_exception['errorType']
-        self.requestId = api_exception['requestId']
-        self.stackTrace = api_exception['stackTrace']
+        self.errorMessage = api_exception["errorMessage"]
+        self.errorType = api_exception["errorType"]
+        self.requestId = api_exception["requestId"]
+        self.stackTrace = api_exception["stackTrace"]
 
 
 class BavestInvalidTypeError(BavestApiException):

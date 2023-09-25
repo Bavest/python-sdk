@@ -236,7 +236,12 @@ class Stock:
         :return:stock financials
         """
         try:
-            body = {"symbol": symbol, "freq": freq.name, "statement": statement.name, "currency": currency}
+            body = {
+                "symbol": symbol,
+                "freq": freq.name,
+                "statement": statement.name,
+                "currency": currency,
+            }
             self.response = api.post(urls.stock_financials, self.headers, body)
             content = check_response(json.loads(self.response.content))
             return content
@@ -259,8 +264,13 @@ class Stock:
         try:
             frm_time = datetime.timestamp(frm_date)
             to_time = datetime.timestamp(to_date)
-            body = {"symbol": symbol, "from": frm_time, "to": to_time, "resolution": resolution.name,
-                    "currency": currency}
+            body = {
+                "symbol": symbol,
+                "from": frm_time,
+                "to": to_time,
+                "resolution": resolution.name,
+                "currency": currency,
+            }
             self.response = api.post(urls.stock_candle, self.headers, body)
             content = check_response(json.loads(self.response.content))
             return content
@@ -448,9 +458,13 @@ class Portfolio:
         try:
             frm_time = datetime.timestamp(frm_date)
             to_time = datetime.timestamp(to_date)
-            body = {"portfolio_items": transaction_items, "from": frm_time, "to": to_time,
-                    "resolution": resolution.name,
-                    "currency": currency}
+            body = {
+                "portfolio_items": transaction_items,
+                "from": frm_time,
+                "to": to_time,
+                "resolution": resolution.name,
+                "currency": currency,
+            }
             self.response = api.post(urls.portfolio_stats, self.headers, body)
             content = check_response(json.loads(self.response.content))
             return content
@@ -472,9 +486,13 @@ class Portfolio:
         try:
             frm_time = datetime.timestamp(frm_date)
             to_time = datetime.timestamp(to_date)
-            body = {"portfolio_items": transaction_items, "from": frm_time, "to": to_time,
-                    "resolution": resolution.name,
-                    "currency": currency}
+            body = {
+                "portfolio_items": transaction_items,
+                "from": frm_time,
+                "to": to_time,
+                "resolution": resolution.name,
+                "currency": currency,
+            }
             self.response = api.post(urls.portfolio_chart, self.headers, body)
             content = check_response(json.loads(self.response.content))
             return content
@@ -720,7 +738,7 @@ class BavestRESTClient:
     forex = None
 
     def __init__(self, key):
-        self.headers = {'Content-Type': 'application/json', 'x-api-key': key}
+        self.headers = {"Content-Type": "application/json", "x-api-key": key}
         self.stock = Stock(self.headers)
         self.portfolio = Portfolio(self.headers)
         self.widget = Widget(self.headers)
@@ -758,8 +776,13 @@ class BavestRESTClient:
         try:
             frm_time = datetime.timestamp(frm_date)
             to_time = datetime.timestamp(to_date)
-            body = {"symbol": symbol, "from": frm_time, "to": to_time, "resolution": resolution.name,
-                    "currency": currency}
+            body = {
+                "symbol": symbol,
+                "from": frm_time,
+                "to": to_time,
+                "resolution": resolution.name,
+                "currency": currency,
+            }
             self.response = api.post(urls.candle_url, self.headers, body)
             content = check_response(json.loads(self.response.content))
             return content

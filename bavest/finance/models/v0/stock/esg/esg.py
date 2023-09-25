@@ -54,7 +54,9 @@ class Esg(BaseModel):
     data: List[DataItem] = []
     series: Union[Series, None]
     sector: Union[Sector, None]
-    industrie_rating: Union[IndustrieRating, None] = Field(None, alias="industrie-rating")
+    industrie_rating: Union[IndustrieRating, None] = Field(
+        None, alias="industrie-rating"
+    )
     environmentScore: float
     governanceScore: float
     socialScore: float
