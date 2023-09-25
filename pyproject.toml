@@ -2,7 +2,7 @@
 name = "bavest"
 version = "1.0.1"
 description = "The Bavest Finance Python SDK"
-authors = ["William Todt <william.todt@bavest.co>", "Hisham Parveez <hisham.parveez@bavest.co>"]
+authors = ["William Todt <william.todt@bavest.co>"]
 readme = "README.md"
 packages = [{include = "bavest"}]
 
