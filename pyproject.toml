@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "bavest"
-version = "1.0.1"
+version = "1.0.2"
 description = "The Bavest Finance Python SDK"
 authors = ["William Todt <william.todt@bavest.co>"]
 readme = "README.md"
