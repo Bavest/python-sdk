@@ -7,6 +7,7 @@ import requests.exceptions
 from . import urls
 from bavest import api
 from bavest.errors import *
+from bavest.finance.models import *
 
 sys.tracebacklimit = 0
 
@@ -268,7 +269,7 @@ class Stock:
                 "symbol": symbol,
                 "from": frm_time,
                 "to": to_time,
-                "resolution": resolution.name,
+                "resolution": resolution.value,
                 "currency": currency,
             }
             self.response = api.post(urls.stock_candle, self.headers, body)
@@ -462,7 +463,7 @@ class Portfolio:
                 "portfolio_items": transaction_items,
                 "from": frm_time,
                 "to": to_time,
-                "resolution": resolution.name,
+                "resolution": resolution.value,
                 "currency": currency,
             }
             self.response = api.post(urls.portfolio_stats, self.headers, body)
@@ -490,7 +491,7 @@ class Portfolio:
                 "portfolio_items": transaction_items,
                 "from": frm_time,
                 "to": to_time,
-                "resolution": resolution.name,
+                "resolution": resolution.value,
                 "currency": currency,
             }
             self.response = api.post(urls.portfolio_chart, self.headers, body)
@@ -774,13 +775,13 @@ class BavestRESTClient:
         :return:
         """
         try:
-            frm_time = datetime.timestamp(frm_date)
-            to_time = datetime.timestamp(to_date)
+            frm_time = int(datetime.timestamp(frm_date))
+            to_time = int(datetime.timestamp(to_date))
             body = {
                 "symbol": symbol,
                 "from": frm_time,
                 "to": to_time,
-                "resolution": resolution.name,
+                "resolution": resolution.value,
                 "currency": currency,
             }
             self.response = api.post(urls.candle_url, self.headers, body)
